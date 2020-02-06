@@ -48,4 +48,3 @@ We are looping through each of the 40 forecast periods here. We use the [moment.
 ## Additional Details
 
 The JSON object we get from the API has additional information on the forecast. Add this information and format it to display clearly on your web page.
-```
