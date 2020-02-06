@@ -16,7 +16,7 @@ new repository for you and grant you access to it on GitHub. In order
 to start working on the lab, simply clone the repository to your
 laptop or other working environment.
 
-## Tutorial
+## Tutorials
 
 Use the [tutorials](/tutorials/README.md)
 to get started with using the weather API. We'll begin by
