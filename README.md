@@ -1,4 +1,4 @@
-# Lab2: Using JavaScript
+# Weather App
 
 In this assignment you will use JavaScript to build a weather app.  To
 get the weather, we'll use the [OpenWeatherMap
@@ -7,7 +7,7 @@ API](https://openweathermap.org/api).
 ## Starting the lab
 
 To start the lab, you must follow this [GitHub Classroom
-link](https://classroom.github.com/a/ihugWCDa). This will create a
+link](TBD). This will create a
 private repository for you using our classroom site. We will only
 grade repositories created and submitted this way.
 
@@ -18,8 +18,8 @@ laptop or other working environment.
 
 ## Tutorial
 
-Use the [tutorial](https://github.com/BYU-CS-260-Winter-2019/lab2/wiki)
-on the Wiki to get started with using the weather API. We'll begin by
+Use the [tutorial](/tutorials/README.md)
+to get started with using the weather API. We'll begin by
 building a form that gets the current weather:
 
 ![weather form](images/weatherForm.png)
@@ -69,7 +69,7 @@ Item | Points
 --- | ---
 Search for current weather works | 40
 5-day/3-hour weather forecast added  | 30
-Effort spent creating a professional-looking webpage | 20
+Effort spent adding information that is returned from the API | 20
 Uses good web design principles | 10
 
 For the web design principles, you will receive 2 points for each for
