@@ -18,7 +18,7 @@ laptop or other working environment.
 
 ## Tutorial
 
-Use the [tutorial](/tutorials/README.md)
+Use the [tutorials](/tutorials/README.md)
 to get started with using the weather API. We'll begin by
 building a form that gets the current weather:
 
