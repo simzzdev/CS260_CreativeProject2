@@ -5,14 +5,14 @@ let searchBar = document.getElementById("searchBar");
 
 searchBtn.addEventListener("click", function(e) {
 	let playerName = searchBar.value;
-	let request = fetch(playerEndpoint + playerName);
-	let response = request.then(function (response) {
-		return response.json();
+	let webRequest = fetch(playerEndpoint + playerName);
+	let jsonRequest = webRequest.then(function (resp) {
+		return resp.json();
 	});
-	request.catch(function(err) {
+	webRequest.catch(function(err) {
 		alert(err);
 	});
-	response.then(function(json) {
+	jsonRequest.then(function(json) {
 		console.log(json[0].Description);
 	});
-});
+}); 
