@@ -4,14 +4,15 @@ let searchBtn = document.getElementById("searchBtn");
 let searchBar = document.getElementById("searchBar");
 
 searchBtn.addEventListener("click", function(e) {
-	let req = fetch(playerEndpoint + "Michael%20Vick");
-	let resp = req.then(function (resp) {
-		return resp.json();
+	let playerName = searchBar.value;
+	let request = fetch(playerEndpoint + playerName);
+	let response = request.then(function (response) {
+		return response.json();
 	});
-	req.catch(function(err) {
+	request.catch(function(err) {
 		alert(err);
 	});
-	resp.then(function(json) {
+	response.then(function(json) {
 		console.log(json[0].Description);
 	});
 });
