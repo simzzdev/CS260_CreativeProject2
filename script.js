@@ -15,4 +15,4 @@ searchBtn.addEventListener("click", function(e) {
 	jsonRequest.then(function(json) {
 		console.log(json[0].Description);
 	});
-});
+}); 
