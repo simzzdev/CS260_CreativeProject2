@@ -1,5 +1,9 @@
 div.crime {
-	background-color: lightblue;
 	width: 400px;
 	padding: 8px;
+}
+
+div.teamDiv {
+	display: flex;
+	flex-direction: row;
 }
