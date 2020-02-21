@@ -15,10 +15,23 @@ searchBtn.addEventListener("click", function(e) {
 	});
 	jsonRequest.then(function(json) {
 		let totalHtml = "";
+
+
+		document.getElementById("playerName").innerText = json[i].Name;
+
 		for (let i = 0; i < json.length; i++) {
-			var html = "<h3>" + json[i].Name + "</h3><h6>" + json[i].Description + "</h6>";
-			totalHtml += html;
-			
+			let crime = "<div class='crime' style=background-color: lightblue>";
+			crime += "<p class='crimeDate'>" + json[i].Date + "</p>";
+			crime += "<div class='teamDiv'>";
+			crime += "<img src='' alt= ' ' />";
+			crime += "<p class='teamName'>" + json[i].Team_preffered_name + "</p>";
+			crime += "</div>";
+			crime += "<p class='crimeDate'>" + json[i].Category + "</p>";
+			crime += "<p class='crimeDescription'>" + json[i].Description + "</p>";
+			crime += "<p class='crimeOutcome'>" + json[i].Outcome + "</p>";
+			crime += "</div>";
+			crime += "</div>";
+			totalHtml += crime;
 		}
 		results.innerHTML = totalHtml;
 	});
