@@ -1,0 +1,9 @@
+div.crime {
+	width: 400px;
+	padding: 8px;
+}
+
+div.teamDiv {
+	display: flex;
+	flex-direction: row;
+}
