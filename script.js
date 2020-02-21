@@ -17,7 +17,7 @@ searchBtn.addEventListener("click", function(e) {
 		let totalHtml = "";
 
 
-		document.getElementById("playerName").innerText = json[i].Name;
+		document.getElementById("playerName").innerText = json[0].Name + " " + json[0].Position_name;
 
 		for (let i = 0; i < json.length; i++) {
 			let crime = "<div class='crime' style=background-color: lightblue>";
