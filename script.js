@@ -41,3 +41,13 @@ searchBtn.addEventListener("click", function(e) {
 });
 
 // Load the list of suggested players
+let webRequest = fetch(suggestionsEndpoint);
+let jsonRequest = webRequest.then(function (resp) {
+	return resp.json();
+});
+webRequest.catch(function(err) {
+	alert(err);
+});
+jsonRequest.then(function(json) {
+	let totalHtml = "";
+});
