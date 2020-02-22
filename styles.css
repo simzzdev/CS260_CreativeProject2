@@ -52,6 +52,7 @@ div.content {
 	margin-left: 10%;
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 40px;
 }
 
 #searchSuggestions {
@@ -80,8 +81,8 @@ a {
 
 footer {
 	width: 100%;
-	background-color: rgba(32, 54, 68, 0.5);
-	position: absolute;
+	background-color: rgba(184, 218, 240, 0.85);
+	position: fixed;
 	bottom:0px;
 	left: 0px; 
 	right: 0px;
