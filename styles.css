@@ -21,23 +21,28 @@ p {
 }
 
 #playerName {	
-	font-size: 20px;
+	font-size: 26px;
 	font-weight: bold;
 	margin: 16px;
+	margin-top: 50px;
+	flex-wrap: nowrap;
+	text-align: center;
 }
 
 p.teamName {
 	font-size: 18px;
 }
 
-p.crimeDate {
-
+.crimeDate {
+	text-align: center;
+	margin: 0px;
+	margin-bottom: 10px;
 }
 
 p.crimeCategory {	
 	font-size: 20px;
 	font-weight: bold;
-	margin-bottom: 8px;
+	margin-bottom: 15px;
 }
 
 p.crimeDescription {
@@ -87,7 +92,22 @@ footer {
 	bottom:0px;
 	left: 0px; 
 	right: 0px;
-	height:36px;
+	height: 48px;
 	padding: 0px;
 	text-align: center;
+}
+.project-title {
+	text-align: center;
+}
+.footer-text {
+	margin-top: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+	#playerName {
+		margin-top: 0px;
+	}
+	.footer-text{
+		margin-top: 5px;
+	}
 }

@@ -38,15 +38,15 @@ function searchPlayer(playerName) {
 		for (let i = 0; i < json.length; i++) {
 			let crime = "<div class='crime' style='background-color:#" + json[i].Team_hex_color + "' >";
 			let date = new Date(json[i].Date);
-			crime += "<p class='crimeDate'>" + date.toNiceDateString() + "</p>";
+			crime += "<h2 class='crimeDate'>" + date.toNiceDateString() + "</h2>";
 			crime += "<div class='teamDiv'>";
 			let imgName = "images/teams/" + json[i].Team_preffered_name.toLowerCase().replace(" ", "-").replace(" ", "-") + ".png";
 			crime += "<img width=36 height=36 src=" + imgName + " alt= ' ' />";
 			crime += "<p class='teamName'>" + json[i].Team_preffered_name + "</p>";
 			crime += "</div>";
-			crime += "<p class='crimeCategory'>" + json[i].Category + "</p>";
-			crime += "<p class='crimeDescription'>" + json[i].Description + "</p>";
-			crime += "<p class='crimeOutcome'>" + json[i].Outcome + "</p>";
+			crime += "<p class='crimeCategory'> Crime - " + json[i].Category + "</p>";
+			crime += "<p class='crimeDescription'> <strong>Description - </strong>" + json[i].Description + "</p>";
+			crime += "<p class='crimeOutcome'> <strong>Outcome - </strong>" + json[i].Outcome + "</p>";
 			crime += "</div>";
 			crime += "</div>";
 			totalHtml += crime;
