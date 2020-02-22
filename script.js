@@ -5,8 +5,7 @@ let searchBtn = document.getElementById("searchBtn");
 let searchBar = document.getElementById("searchBar");
 let results = document.getElementById("results");
 
-searchBtn.addEventListener("click", function(e) {
-	let playerName = searchBar.value;
+function searchPlayer(playerName) {
 	let webRequest = fetch(playerEndpoint + playerName);
 	let jsonRequest = webRequest.then(function (resp) {
 		return resp.json();
@@ -16,8 +15,6 @@ searchBtn.addEventListener("click", function(e) {
 	});
 	jsonRequest.then(function(json) {
 		let totalHtml = "";
-
-
 		document.getElementById("playerName").innerText = json[0].Name + " " + json[0].Position_name;
 
 		for (let i = 0; i < json.length; i++) {
@@ -36,4 +33,11 @@ searchBtn.addEventListener("click", function(e) {
 		}
 		results.innerHTML = totalHtml;
 	});
+}
+
+searchBtn.addEventListener("click", function(e) {
+	let playerName = searchBar.value;
+	searchPlayer(playerName);	
 });
+
+// Load the list of suggested players
