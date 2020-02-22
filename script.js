@@ -1,4 +1,5 @@
 let playerEndpoint = "http://nflarrest.com/api/v1/player/arrests/";
+let suggestionsEndpoint = "http://nflarrest.com/api/v1/player?limit=10";
 
 let searchBtn = document.getElementById("searchBtn");
 let searchBar = document.getElementById("searchBar");
@@ -20,7 +21,7 @@ searchBtn.addEventListener("click", function(e) {
 		document.getElementById("playerName").innerText = json[0].Name + " " + json[0].Position_name;
 
 		for (let i = 0; i < json.length; i++) {
-			let crime = "<div class='crime' style=background-color: lightblue>";
+			let crime = "<div class='crime' style='background-color: lightblue' >";
 			crime += "<p class='crimeDate'>" + json[i].Date + "</p>";
 			crime += "<div class='teamDiv'>";
 			crime += "<img src='' alt= ' ' />";
