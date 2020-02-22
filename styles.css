@@ -3,16 +3,52 @@ div.crime {
 	padding: 8px;
 	margin: 8px;
 	color: white;
+	font-family: sans-serif
 }
 
 div.teamDiv {
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 12px;
+}
+
+p {
+	margin:4px;
+}
+
+#playerName {	
+	font-size: 20px;
+	font-weight: bold;
+	margin: 16px;
+}
+
+p.teamName {
+	font-size: 18px;
+}
+
+p.crimeDate {
+
+}
+
+p.crimeCategory {	
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+p.crimeDescription {
+	margin-bottom: 8px;
+}
+
+p.crimeOutcome {
+
 }
 
 div.content {
 	width: 80%;
 	margin-left: 10%;
+	display: flex;
+	flex-direction: column;
 }
 
 #searchSuggestions {
@@ -35,7 +71,6 @@ a {
 #results {
 	display: flex;
 	flex-direction: row;
-	justify-items: baseline;
 	justify-content: center;
 	flex-wrap: wrap;
 }
