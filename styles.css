@@ -1,6 +1,6 @@
 body {
 	font-family: sans-serif;
-	background-color: rgb(231, 237, 245)
+	background-color: rgb(231, 237, 245);
 }
 
 div.crime {
@@ -87,7 +87,7 @@ footer {
 	bottom:0px;
 	left: 0px; 
 	right: 0px;
-	height:48px;
+	height:36px;
 	padding: 0px;
 	text-align: center;
 }
