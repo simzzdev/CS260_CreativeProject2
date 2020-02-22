@@ -1,5 +1,5 @@
 let playerEndpoint = "http://nflarrest.com/api/v1/player/arrests/";
-let suggestionsEndpoint = "http://nflarrest.com/api/v1/player?limit=10";
+let suggestionsEndpoint = "http://nflarrest.com/api/v1/player?limit=";
 
 let searchBtn = document.getElementById("searchBtn");
 let searchBar = document.getElementById("searchBar");
@@ -65,7 +65,12 @@ function suggestionClicked(sender) {
 };
 
 // Load the list of suggested players
-let webRequest = fetch(suggestionsEndpoint);
+let suggestionsCount = Math.round(document.body.clientWidth / 80);
+while (suggestionsCount % 3 !=0) {
+	suggestionsCount--;
+}
+console.log(suggestionsCount);
+let webRequest = fetch(suggestionsEndpoint + suggestionsCount);
 let jsonRequest = webRequest.then(function (resp) {
 	return resp.json();
 });
@@ -74,15 +79,22 @@ webRequest.catch(function(err) {
 });
 jsonRequest.then(function(json) {
 	let totalHtml = "";
-	let rowLength = json.length / 2;
+	let rowLength = json.length / 3;
 	for (let i = 0; i < rowLength; i++) {
 		let html = `<a onclick="suggestionClicked(this)">` + json[i].Name + `</a>`;
 		if (i != rowLength - 1)
 			html += " | ";
 		totalHtml += html;
 	}	
-	totalHtml += "<br />";
-	for (let i = rowLength; i < json.length; i++) {
+	totalHtml += "<p />";
+	for (let i = rowLength; i < rowLength * 2; i++) {
+		let html = `<a onclick="suggestionClicked(this)">` + json[i].Name + `</a>`;
+		if (i != (rowLength * 2) - 1)
+			html += " | ";
+		totalHtml += html;
+	}
+	totalHtml += "<p />";
+	for (let i = rowLength * 2; i < json.length; i++) {
 		let html = `<a onclick="suggestionClicked(this)">` + json[i].Name + `</a>`;
 		if (i != json.length - 1)
 			html += " | ";
