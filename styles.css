@@ -1,9 +1,12 @@
+body {
+	font-family: sans-serif;
+}
+
 div.crime {
 	width: 400px;
 	padding: 8px;
 	margin: 8px;
 	color: white;
-	font-family: sans-serif
 }
 
 div.teamDiv {
@@ -75,6 +78,14 @@ a {
 	flex-wrap: wrap;
 }
 
-#playerName {
-
+footer {
+	width: 100%;
+	background-color: rgba(32, 54, 68, 0.5);
+	position: absolute;
+	bottom:0px;
+	left: 0px; 
+	right: 0px;
+	height:36px;
+	padding: 0px;
+	text-align: center;
 }
