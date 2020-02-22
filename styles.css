@@ -2,6 +2,7 @@ div.crime {
 	width: 400px;
 	padding: 8px;
 	margin: 8px;
+	color: white;
 }
 
 div.teamDiv {
@@ -14,10 +15,21 @@ div.content {
 	margin-left: 10%;
 }
 
+#searchSuggestions {
+	text-align: center;
+}
+
 #search {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+a {
+	color: blue;
+	margin: 0px 8px 0px 8px;
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 #results {

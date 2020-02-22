@@ -4,6 +4,7 @@ let suggestionsEndpoint = "http://nflarrest.com/api/v1/player?limit=10";
 let searchBtn = document.getElementById("searchBtn");
 let searchBar = document.getElementById("searchBar");
 let results = document.getElementById("results");
+let searchSuggestions = document.getElementById("searchSuggestions");
 
 function searchPlayer(playerName) {
 	let webRequest = fetch(playerEndpoint + playerName);
@@ -18,7 +19,7 @@ function searchPlayer(playerName) {
 		document.getElementById("playerName").innerText = json[0].Name + " " + json[0].Position_name;
 
 		for (let i = 0; i < json.length; i++) {
-			let crime = "<div class='crime' style='background-color: lightblue' >";
+			let crime = "<div class='crime' style='background-color:#" + json[i].Team_hex_color + "' >";
 			crime += "<p class='crimeDate'>" + json[i].Date + "</p>";
 			crime += "<div class='teamDiv'>";
 			crime += "<img src='' alt= ' ' />";
@@ -40,6 +41,10 @@ searchBtn.addEventListener("click", function(e) {
 	searchPlayer(playerName);	
 });
 
+function suggestionClicked(sender) {
+	searchPlayer(sender.innerText);
+};
+
 // Load the list of suggested players
 let webRequest = fetch(suggestionsEndpoint);
 let jsonRequest = webRequest.then(function (resp) {
@@ -50,4 +55,19 @@ webRequest.catch(function(err) {
 });
 jsonRequest.then(function(json) {
 	let totalHtml = "";
+	let rowLength = json.length / 2;
+	for (let i = 0; i < rowLength; i++) {
+		let html = `<a onclick="suggestionClicked(this)">` + json[i].Name + `</a>`;
+		if (i != rowLength - 1)
+			html += " | ";
+		totalHtml += html;
+	}	
+	totalHtml += "<br />";
+	for (let i = rowLength; i < json.length; i++) {
+		let html = `<a onclick="suggestionClicked(this)">` + json[i].Name + `</a>`;
+		if (i != json.length - 1)
+			html += " | ";
+		totalHtml += html;
+	}
+	searchSuggestions.innerHTML = totalHtml;
 });
